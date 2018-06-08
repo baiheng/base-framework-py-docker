@@ -1,0 +1,15 @@
+version: '2'
+services:
+ my_server:
+  image: alert-center:v1
+  ports:
+   - 18289:18289
+  environment:
+   - SETTINGS=PRODUCTION
+   - LANG=en_US.utf8
+   - LC_ALL=en_US.utf8
+  volumes:
+   - .:/work
+  working_dir: /work
+  network_mode: "host"
+  command: /bin/bash ./bin/run-docker.sh
