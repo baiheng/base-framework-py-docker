@@ -12,4 +12,4 @@ services:
    - .:/work
   working_dir: /work
   network_mode: "host"
-  command: /bin/bash ./bin/run-docker.sh
+  command: /bin/bash ./bin/start-server.sh

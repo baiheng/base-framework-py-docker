@@ -1,9 +1,9 @@
 #!/bin/bash
 #===============================================================================
 #
-#          FILE:  run-docker.sh
+#          FILE:  start.sh
 # 
-#         USAGE:  ./run-docker.sh 
+#         USAGE:  ./start.sh 
 # 
 #   DESCRIPTION:  
 # 
@@ -14,18 +14,8 @@
 #        AUTHOR:  chenbaiheng (), chenbaiheng@xunlei.com
 #       COMPANY:  XunLei Networking Tech
 #       VERSION:  1.0
-#       CREATED:  2018年06月06日 19时28分50秒 CST
+#       CREATED:  2018年06月06日 17时33分38秒 CST
 #      REVISION:  ---
 #===============================================================================
 
-pip3 install -r /work/requirement.txt
-ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
-rm /tmp/* -rf
-
-gunicorn -c ./core/conf/server.ini server:app
-
-celery multi start worker -A core.celery_app -l info \
-      --pidfile="/tmp/celery.pid" \
-      --logfile="/work/log/celery.log"
-
-tail -f /dev/null
+watchmedo auto-restart --patterns="*.py;*.ini" --recursive "./server.py"

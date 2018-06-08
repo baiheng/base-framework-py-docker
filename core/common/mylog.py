@@ -6,9 +6,5 @@ import logging.config
 import os
 
 logging.config.fileConfig("./core/conf/logging.ini")
-
-logger = logging.getLogger("root")
-
-print("asdf")
-logger.debug("adsf")
-print(logging.getLoggerClass())
+#logger = logging.getLogger("root")
+logger = logging.getLogger("mylogger")
