@@ -13,13 +13,13 @@ class BaseConfig(object):
     # token
     # 7天有效期
     TOKEN_TIMEOUT = 7 * 24 * 60 * 60 
-    PRIVATE_KEY = '8434567812345678'
+    PRIVATE_KEY = '8434567812345878'
 
     # 数据查询ip
     MYSQL_HOST = '127.0.0.1'
     MYSQL_PORT = 3306
-    MYSQL_USER = "jpush"
-    MYSQL_PWD = "jpush"
+    MYSQL_USER = "**"
+    MYSQL_PWD = "**"
     MYSQL_DB = "test"
 
     REDIS_HOST = "127.0.0.1"
