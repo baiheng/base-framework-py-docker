@@ -15,8 +15,8 @@ class LocalConfig(BaseConfig):
     PRIVATE_KEY = '8434567812345678'
 
     # 数据查询ip
-    MYSQL_HOST = '192.168.53.39'
+    MYSQL_HOST = '**'
     MYSQL_PORT = 3306
-    MYSQL_USER = "jpush"
-    MYSQL_PWD = "jpush"
+    MYSQL_USER = "**"
+    MYSQL_PWD = "**"
     MYSQL_DB = "test"
